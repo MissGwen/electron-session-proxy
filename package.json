@@ -1,7 +1,6 @@
 {
   "name": "electron-session-proxy",
   "version": "1.0.0",
-  "private": true,
   "description": "🎉🎉 A socks proxy with user authentication can be set for electron's session",
   "keywords": [
     "electron",
