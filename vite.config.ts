@@ -9,6 +9,10 @@ export default defineConfig({
       name: "electron-session-proxy",
       fileName: "main",
     },
+    rollupOptions: {
+      external: ["socks", /^node:.+/],
+      output: { globals: (moduleName) => moduleName },
+    },
   },
   plugins: [dts({ outDir: "./", include: "lib", rollupTypes: true })],
 });

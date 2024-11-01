@@ -1,1 +1,3 @@
-export { default as sockProxyRules } from "./socksSessionProxy";
+import { sockProxyRules } from "./socksSessionProxy";
+
+export { sockProxyRules };

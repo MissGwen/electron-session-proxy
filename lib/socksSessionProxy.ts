@@ -6,7 +6,7 @@ import { SocksClient, SocksClientOptions } from "socks";
 // 错误处理
 function errorHandler(
   clientSocket: Socket,
-  proxySocket?: Socket,
+  proxySocket?: Socket
 ): (error: Error) => void {
   return (err: Error) => {
     // 如果处理请求时发生错误，向客户端发送错误响应，并关闭连接。
@@ -23,10 +23,10 @@ function errorHandler(
  * @param { string } proxyRules 代理地址 [socks4/5]://[userId]:[password]@[host]:[port]
  * @returns { string } 本地Http代理地址
  */
-export default async function (proxyRules: string): Promise<string> {
+export async function sockProxyRules(proxyRules: string): Promise<string> {
   // 解析代理规则 [_,type,userId,password,host,port]
   const proxyRulesList = proxyRules.match(
-    /socks(\d+):\/\/(.*):(.*?)@(.*):(\d+)/,
+    /socks(\d+):\/\/(.*):(.*?)@(.*):(\d+)/
   );
 
   if (!proxyRulesList) return Promise.reject("Invalid proxy rules.");
@@ -107,7 +107,7 @@ export default async function (proxyRules: string): Promise<string> {
       } catch (error) {
         errorHandler(clientSocket)(error as Error);
       }
-    },
+    }
   );
 
   httpServer.on("error", (error) => {
