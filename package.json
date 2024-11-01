@@ -1,26 +1,47 @@
 {
-  "name": "vite-project",
+  "name": "electron-session-proxy",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "🎉🎉 A socks proxy with user authentication can be set for electron's session",
+  "keywords": [
+    "electron",
+    "electron-session",
+    "socks",
+    "proxy"
+  ],
+  "homepage": "https://github.com/MissGwen/electron-session-proxy",
+  "bugs": "https://github.com/MissGwen/electron-session-proxy/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MissGwen/electron-session-proxy",
+    "directory": "dist"
+  },
+  "license": "MIT",
+  "author": "Miss Gwen <1526566980@qq.com>",
   "type": "module",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/main.js",
+    "require": "./dist/main.umd.cjs"
+  },
+  "main": "./dist/main.umd.cjs",
+  "module": "./dist/main.js",
+  "types": "./index.d.ts",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "main": "./dist/counter.umd.cjs",
-  "module": "./dist/counter.js",
-  "types": "./index.d.ts",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/counter.js",
-    "require": "./dist/counter.umd.cjs"
-  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "dev": "vite"
   },
   "devDependencies": {
+    "@types/node": "^22.7.9",
     "typescript": "~5.6.3",
-    "vite": "^5.4.9"
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "dependencies": {
+    "socks": "^2.8.3"
   }
 }
