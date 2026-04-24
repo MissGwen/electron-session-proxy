@@ -1,3 +1,4 @@
+<h1 align="center">The original npm package has been deprecated for personal reasons, and a new version will be released in 24 hours.</h1>
 <h2 align="center">electron-session-proxy</h2>
 
 A socks proxy with user authentication can be set for electron's session
