@@ -1,6 +1,6 @@
 <h2 align="center">electron-session-proxy</h2>
 
-🎉🎉 A socks proxy with user authentication can be set for electron's session
+A socks proxy with user authentication can be set for electron's session
 
 ### Install
 
