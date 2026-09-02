@@ -1,3 +1,10 @@
+> **DEPRECATED — this project is no longer maintained.**
+>
+> It has been rewritten from scratch as **[electron-viasocks](https://github.com/MissGwen/electron-viasocks)** (v2),
+> which fixes HTTP forwarding, concurrency races and port collisions present in this version,
+> and adds socket timeouts, typed errors and graceful shutdown.
+> See the [migration guide](https://github.com/MissGwen/electron-viasocks#migrating-from-v1).
+
 <h2 align="center">electron-session-proxy</h2>
 
 A socks proxy with user authentication can be set for electron's session
