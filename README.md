@@ -51,3 +51,9 @@ ses.setProxy({ proxyRules });
 ### Thanks
 
 Thanks to the socks( [GitHub](https://github.com/JoshGlazebrook/socks) | [npm](https://www.npmjs.com/package/socks) ) project, it has been a huge help to me.
+
+---
+
+## License
+
+[MIT](./LICENSE) © 2026 MissGwen
